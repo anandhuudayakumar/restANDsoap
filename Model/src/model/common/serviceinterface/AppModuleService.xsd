@@ -1,0 +1,192 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="/model/common/types/"
+     xmlns:tns="/model/common/types/" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/" xmlns:ns1="/model/common/">
+    <import namespace="/model/common/" schemaLocation="../OpportunitiesVOSDO.xsd"/>
+    <import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="classpath:/META-INF/wsdl/BC4JServiceCS.xsd"/>
+    <import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="classpath:/META-INF/wsdl/BC4JService.xsd"/>
+    <element name="createOpportunitiesVO1">
+        <complexType>
+            <sequence>
+                <element name="opportunitiesVO1" type="ns1:OpportunitiesVOSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createOpportunitiesVO1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:OpportunitiesVOSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateOpportunitiesVO1">
+        <complexType>
+            <sequence>
+                <element name="opportunitiesVO1" type="ns1:OpportunitiesVOSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateOpportunitiesVO1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:OpportunitiesVOSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteOpportunitiesVO1">
+        <complexType>
+            <sequence>
+                <element name="opportunitiesVO1" type="ns1:OpportunitiesVOSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteOpportunitiesVO1Response">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="findOpportunitiesVO1">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns0:FindCriteria"/>
+                <element name="findControl" type="ns0:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findOpportunitiesVO1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:OpportunitiesVOSDO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getDfltObjAttrHints">
+        <complexType>
+            <sequence>
+                <element name="viewName" type="string"/>
+                <element name="localeName" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getDfltObjAttrHintsResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:ObjAttrHints"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getServiceLastUpdateTime">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="getServiceLastUpdateTimeResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:dateTime-Timestamp"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getEntityList">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="getEntityListResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:ServiceViewInfo" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="invokeObjectFunction">
+        <complexType>
+            <sequence>
+                <element name="row" type="anyType"/>
+                <element name="viewName" type="string"/>
+                <element name="scriptName" type="string"/>
+                <element name="params" type="anyType" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="invokeObjectFunctionResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="anyType"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findOpportunitiesVO1Name">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns0:FindCriteria"/>
+                <element name="bindOppName" type="string"/>
+                <element name="findControl" type="ns0:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findOpportunitiesVO1NameResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:OpportunitiesVOSDO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getOpportunitiesVO1">
+        <complexType>
+            <sequence>
+                <element name="oppId" type="decimal"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getOpportunitiesVO1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:OpportunitiesVOSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="mergeOpportunitiesVO1">
+        <complexType>
+            <sequence>
+                <element name="opportunitiesVO1" type="ns1:OpportunitiesVOSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="mergeOpportunitiesVO1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:OpportunitiesVOSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processOpportunitiesVO1">
+        <complexType>
+            <sequence>
+                <element name="changeOperation" type="string"/>
+                <element name="opportunitiesVO1" type="ns1:OpportunitiesVOSDO" minOccurs="0" maxOccurs="unbounded"/>
+                <element name="processControl" type="ns0:ProcessControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processOpportunitiesVO1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:OpportunitiesVOSDO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processCSOpportunitiesVO1">
+        <complexType>
+            <sequence>
+                <element name="processData" type="ns0:ProcessData"/>
+                <element name="processControl" type="ns0:ProcessControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processCSOpportunitiesVO1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:ProcessData"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

@@ -1,0 +1,38 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/"
+     xmlns:sdoJava="commonj.sdo/java" targetNamespace="/model/common/" xmlns="/model/common/"
+     elementFormDefault="qualified" sdoJava:package="model.common">
+    <xsd:import schemaLocation="classpath:/META-INF/wsdl/BC4JService.xsd" namespace="http://xmlns.oracle.com/adf/svc/types/"/>
+    <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
+    <xsd:complexType name="OpportunitiesVOSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>OppId</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="OppId" type="xsd:decimal" minOccurs="0"/>
+            <xsd:element name="WinProb" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="CloseDate" type="ns0:dateTime-Timestamp" minOccurs="0" nillable="true"/>
+            <xsd:element name="PrimaryContact" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="SalesStage" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="SalesMeathod" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="SalesChannel" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="Budgeted" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="BudgetAmount" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="EstimatedDuration" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="RiskLevel" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="DecisionLevel" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="OppDocument" type="ns0:base64Binary-DataHandler" minOccurs="0" nillable="true"/>
+            <xsd:element name="CreatedBy" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="CreatedDate" type="ns0:dateTime-Timestamp" minOccurs="0" nillable="true"/>
+            <xsd:element name="ModifiedDate" type="ns0:dateTime-Timestamp" minOccurs="0" nillable="true"/>
+            <xsd:element name="ObjectVersion" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="LastModifiedBy" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="OppName" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="Accountid" type="xsd:decimal" minOccurs="0" nillable="true"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="opportunitiesVOSDO" type="OpportunitiesVOSDO"/>
+</xsd:schema>

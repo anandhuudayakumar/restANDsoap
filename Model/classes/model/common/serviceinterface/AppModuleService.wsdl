@@ -1,0 +1,332 @@
+<wsdl:definitions
+     name="AppModuleService"
+     targetNamespace="/model/common/"
+     xmlns:tns="/model/common/"
+     xmlns:types="/model/common/types/"
+     xmlns:errors="http://xmlns.oracle.com/adf/svc/errors/"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+    <wsdl:import namespace="http://xmlns.oracle.com/adf/svc/errors/" location="classpath:/META-INF/wsdl/ServiceException.wsdl"/>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="/model/common/types/" schemaLocation="AppModuleService.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="AppModuleService_createOpportunitiesVO1">
+        <wsdl:part name="parameters" element="types:createOpportunitiesVO1"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_createOpportunitiesVO1Response">
+        <wsdl:part name="parameters" element="types:createOpportunitiesVO1Response"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_updateOpportunitiesVO1">
+        <wsdl:part name="parameters" element="types:updateOpportunitiesVO1"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_updateOpportunitiesVO1Response">
+        <wsdl:part name="parameters" element="types:updateOpportunitiesVO1Response"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_deleteOpportunitiesVO1">
+        <wsdl:part name="parameters" element="types:deleteOpportunitiesVO1"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_deleteOpportunitiesVO1Response">
+        <wsdl:part name="parameters" element="types:deleteOpportunitiesVO1Response"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_findOpportunitiesVO1">
+        <wsdl:part name="parameters" element="types:findOpportunitiesVO1"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_findOpportunitiesVO1Response">
+        <wsdl:part name="parameters" element="types:findOpportunitiesVO1Response"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_getDfltObjAttrHints">
+        <wsdl:part name="parameters" element="types:getDfltObjAttrHints"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_getDfltObjAttrHintsResponse">
+        <wsdl:part name="parameters" element="types:getDfltObjAttrHintsResponse"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_getServiceLastUpdateTime">
+        <wsdl:part name="parameters" element="types:getServiceLastUpdateTime"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_getServiceLastUpdateTimeResponse">
+        <wsdl:part name="parameters" element="types:getServiceLastUpdateTimeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_getEntityList">
+        <wsdl:part name="parameters" element="types:getEntityList"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_getEntityListResponse">
+        <wsdl:part name="parameters" element="types:getEntityListResponse"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_invokeObjectFunction">
+        <wsdl:part name="parameters" element="types:invokeObjectFunction"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_invokeObjectFunctionResponse">
+        <wsdl:part name="parameters" element="types:invokeObjectFunctionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_findOpportunitiesVO1Name">
+        <wsdl:part name="parameters" element="types:findOpportunitiesVO1Name"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_findOpportunitiesVO1NameResponse">
+        <wsdl:part name="parameters" element="types:findOpportunitiesVO1NameResponse"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_getOpportunitiesVO1">
+        <wsdl:part name="parameters" element="types:getOpportunitiesVO1"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_getOpportunitiesVO1Response">
+        <wsdl:part name="parameters" element="types:getOpportunitiesVO1Response"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_mergeOpportunitiesVO1">
+        <wsdl:part name="parameters" element="types:mergeOpportunitiesVO1"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_mergeOpportunitiesVO1Response">
+        <wsdl:part name="parameters" element="types:mergeOpportunitiesVO1Response"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_processOpportunitiesVO1">
+        <wsdl:part name="parameters" element="types:processOpportunitiesVO1"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_processOpportunitiesVO1Response">
+        <wsdl:part name="parameters" element="types:processOpportunitiesVO1Response"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_processCSOpportunitiesVO1">
+        <wsdl:part name="parameters" element="types:processCSOpportunitiesVO1"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_processCSOpportunitiesVO1Response">
+        <wsdl:part name="parameters" element="types:processCSOpportunitiesVO1Response"/>
+    </wsdl:message>
+    <wsdl:portType name="AppModuleService">
+        <wsdl:documentation>
+            <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="OpportunitiesVO1" SDOName="tns:OpportunitiesVOSDO"
+                 CreateOpName="createOpportunitiesVO1" UpdateOpName="updateOpportunitiesVO1"
+                 DeleteOpName="deleteOpportunitiesVO1" MergeOpName="mergeOpportunitiesVO1"
+                 GetOpName="getOpportunitiesVO1" FindOpName="findOpportunitiesVO1" ProcessOpName="processOpportunitiesVO1"
+                 ProcessCSOpName="processCSOpportunitiesVO1"/>
+        </wsdl:documentation>
+        <wsdl:operation name="createOpportunitiesVO1">
+            <wsdl:input message="tns:AppModuleService_createOpportunitiesVO1"/>
+            <wsdl:output message="tns:AppModuleService_createOpportunitiesVO1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateOpportunitiesVO1">
+            <wsdl:input message="tns:AppModuleService_updateOpportunitiesVO1"/>
+            <wsdl:output message="tns:AppModuleService_updateOpportunitiesVO1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteOpportunitiesVO1">
+            <wsdl:input message="tns:AppModuleService_deleteOpportunitiesVO1"/>
+            <wsdl:output message="tns:AppModuleService_deleteOpportunitiesVO1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="findOpportunitiesVO1">
+            <wsdl:input message="tns:AppModuleService_findOpportunitiesVO1"/>
+            <wsdl:output message="tns:AppModuleService_findOpportunitiesVO1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getDfltObjAttrHints">
+            <wsdl:input message="tns:AppModuleService_getDfltObjAttrHints"/>
+            <wsdl:output message="tns:AppModuleService_getDfltObjAttrHintsResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getServiceLastUpdateTime">
+            <wsdl:input message="tns:AppModuleService_getServiceLastUpdateTime"/>
+            <wsdl:output message="tns:AppModuleService_getServiceLastUpdateTimeResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getEntityList">
+            <wsdl:input message="tns:AppModuleService_getEntityList"/>
+            <wsdl:output message="tns:AppModuleService_getEntityListResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="invokeObjectFunction">
+            <wsdl:input message="tns:AppModuleService_invokeObjectFunction"/>
+            <wsdl:output message="tns:AppModuleService_invokeObjectFunctionResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="findOpportunitiesVO1Name">
+            <wsdl:input message="tns:AppModuleService_findOpportunitiesVO1Name"/>
+            <wsdl:output message="tns:AppModuleService_findOpportunitiesVO1NameResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getOpportunitiesVO1">
+            <wsdl:input message="tns:AppModuleService_getOpportunitiesVO1"/>
+            <wsdl:output message="tns:AppModuleService_getOpportunitiesVO1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="mergeOpportunitiesVO1">
+            <wsdl:input message="tns:AppModuleService_mergeOpportunitiesVO1"/>
+            <wsdl:output message="tns:AppModuleService_mergeOpportunitiesVO1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="processOpportunitiesVO1">
+            <wsdl:input message="tns:AppModuleService_processOpportunitiesVO1"/>
+            <wsdl:output message="tns:AppModuleService_processOpportunitiesVO1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="processCSOpportunitiesVO1">
+            <wsdl:input message="tns:AppModuleService_processCSOpportunitiesVO1"/>
+            <wsdl:output message="tns:AppModuleService_processCSOpportunitiesVO1Response"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="AppModuleServiceSoapHttp" type="tns:AppModuleService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="createOpportunitiesVO1">
+            <soap:operation soapAction="/model/common/createOpportunitiesVO1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateOpportunitiesVO1">
+            <soap:operation soapAction="/model/common/updateOpportunitiesVO1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteOpportunitiesVO1">
+            <soap:operation soapAction="/model/common/deleteOpportunitiesVO1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="findOpportunitiesVO1">
+            <soap:operation soapAction="/model/common/findOpportunitiesVO1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getDfltObjAttrHints">
+            <soap:operation soapAction="/model/common/getDfltObjAttrHints"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getServiceLastUpdateTime">
+            <soap:operation soapAction="/model/common/getServiceLastUpdateTime"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getEntityList">
+            <soap:operation soapAction="/model/common/getEntityList"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="invokeObjectFunction">
+            <soap:operation soapAction="/model/common/invokeObjectFunction"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="findOpportunitiesVO1Name">
+            <soap:operation soapAction="/model/common/findOpportunitiesVO1Name"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getOpportunitiesVO1">
+            <soap:operation soapAction="/model/common/getOpportunitiesVO1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="mergeOpportunitiesVO1">
+            <soap:operation soapAction="/model/common/mergeOpportunitiesVO1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="processOpportunitiesVO1">
+            <soap:operation soapAction="/model/common/processOpportunitiesVO1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="processCSOpportunitiesVO1">
+            <soap:operation soapAction="/model/common/processCSOpportunitiesVO1"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="AppModuleService">
+        <wsdl:port name="AppModuleServiceSoapHttpPort" binding="tns:AppModuleServiceSoapHttp">
+            <soap:address location="http://localhost:7101/RestTest123-Model-context-root/AppModuleService"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

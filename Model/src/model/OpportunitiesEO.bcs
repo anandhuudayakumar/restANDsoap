@@ -1,0 +1,12 @@
+//Groovy Scripts for model.OpportunitiesEO
+
+package model
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="CloseDate")
+def CloseDate_ExpressionScript_Expression()
+{
+adf.currentDate+30
+}
+
