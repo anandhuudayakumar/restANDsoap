@@ -5,13 +5,13 @@
     <page path="v1_OPP" usageId="v1_AppModule_OpportunitiesVOResources"/>
   </pageMap>
   <dataControlUsages>
-    <BC4JDataControl id="AppModuleDataControl" Package="model"
+    <BC4JDataControl id="OpportunityAMDataControl" Package="model"
                      FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
                      SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
                      SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
                      xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
   </dataControlUsages>
   <pageDefinitionUsages>
-    <page id="v1_AppModule_OpportunitiesVOResources" path="model.rest.v1.AppModule_OpportunitiesVOResources"/>
+    <page id="v1_AppModule_OpportunitiesVOResources" path="model.rest.v1.OpportunityAM_OpportunitiesVOResources"/>
   </pageDefinitionUsages>
 </Application>
